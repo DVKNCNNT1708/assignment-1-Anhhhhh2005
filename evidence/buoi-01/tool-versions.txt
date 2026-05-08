@@ -1,0 +1,10 @@
+# Tool versions
+Fri May  8 21:11:11 +07 2026
+
+git version 2.50.1 (Apple Git-155)
+Docker version 27.3.1, build ce12230
+Docker Compose version v2.30.3-desktop.1
+v25.9.0
+11.12.1
+Python 3.13.5
+pip 24.3.1 from /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pip (python 3.12)

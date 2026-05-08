@@ -1,0 +1,155 @@
+== Tool checks ==
+[PASS] git installed
+[PASS] docker installed
+[PASS] node installed
+[PASS] python installed
+\n== Docker checks ==
+Docker version 27.3.1, build ce12230
+[PASS] docker CLI
+Docker Compose version v2.30.3-desktop.1
+[PASS] docker compose v2
+Client:
+ Version:    27.3.1
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  ai: Ask Gordon - Docker Agent (Docker Inc.)
+    Version:  v0.1.0
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.18.0-desktop.2
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.30.3-desktop.1
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.37
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Alpha) (Docker Inc.)
+    Version:  v0.0.15
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-desktop
+  dev: Docker Dev Environments (Docker Inc.)
+    Version:  v0.1.2
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-dev
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.27
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-extension
+  feedback: Provide feedback, right in your terminal! (Docker Inc.)
+    Version:  v1.0.5
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-feedback
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-init
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-sbom
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.15.0
+    Path:     /Users/ngocanh/.docker/cli-plugins/docker-scout
+
+Server:
+ Containers: 8
+  Running: 2
+  Paused: 0
+  Stopped: 6
+ Images: 20
+ Server Version: 27.3.1
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 472731909fa34bd7bc9c087e4c27943f9835f111
+ runc version: v1.1.13-0-g58aa920
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: unconfined
+  cgroupns
+ Kernel Version: 6.10.14-linuxkit
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: aarch64
+ CPUs: 8
+ Total Memory: 5.786GiB
+ Name: docker-desktop
+ ID: 244c877f-7556-410f-b88a-3101c1ed4ac9
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=unix:///Users/ngocanh/Library/Containers/com.docker.docker/Data/docker-cli.sock
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+WARNING: daemon is not using the default seccomp profile
+[PASS] docker daemon ready
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (arm64v8)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[PASS] hello-world container
+\n== Image checks ==
+[PASS] image registry:2
+[PASS] image python:3.11-slim
+[PASS] image node:20-alpine
+[PASS] image postgres:15-alpine
+[PASS] image rabbitmq:3-management
+[PASS] image eclipse-mosquitto:2
+[PASS] image nginx:alpine
+[PASS] image traefik:v3.1
+[PASS] image prom/prometheus:v2.54.1
+[PASS] image grafana/grafana:11.2.0
+[PASS] image redis:7-alpine
+[PASS] image swaggerapi/swagger-ui:v5.17.14
+[PASS] image hello-world:latest
+[PASS] image ultralytics/ultralytics:latest-cpu
+\n== Ultralytics check ==
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/root/.config/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+8.4.47
+[PASS] ultralytics yolo version
+\n== Compose mini-stack check ==
+ Container compose-nginx-1  Running
+ Container compose-redis-1  Running
+ Container compose-registry-1  Starting
+Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:5000 -> 0.0.0.0:0: listen tcp 0.0.0.0:5000: bind: address already in use
+[WARN] compose mini-stack could not start; maybe ports 8081/5000 are in use
+\nALL CHECKS FINISHED. Read evidence/buoi-01/smoke-test-result.txt for details.

@@ -1,0 +1,22 @@
+REPOSITORY:TAG                               IMAGE ID       SIZE
+ultralytics/ultralytics:latest-cpu           637d68b147d4   2.03GB
+redis:7-alpine                               80dd823f4d2b   39.5MB
+python:3.11-slim                             a33639791d80   150MB
+postgres:15-alpine                           1032c552baa1   270MB
+nginx:alpine                                 7f7dcd27f920   61.6MB
+node:20-alpine                               cd266ddf7e80   136MB
+eclipse-mosquitto:2                          2a23a3e427e4   23.3MB
+hello-world:latest                           eb84fdc6f2a3   5.2kB
+rabbitmq:3-management                        f2edea6e7a01   271MB
+postgres:13                                  62823df8e8db   461MB
+odoo:16                                      26cbdb2232d3   1.73GB
+odoo:16.0                                    26cbdb2232d3   1.73GB
+mcr.microsoft.com/mssql/server:2022-latest   140595692e82   1.63GB
+mcr.microsoft.com/mssql/server:2019-latest   b6d65c67219f   1.49GB
+mcr.microsoft.com/mssql/server:latest        142124bf195c   1.59GB
+traefik:v3.1                                 e465c1402a4b   175MB
+grafana/grafana:11.2.0                       9f82e9bb37c0   467MB
+prom/prometheus:v2.54.1                      4336a50d4ad9   269MB
+swaggerapi/swagger-ui:v5.17.14               45d072e28cb3   116MB
+registry:2                                   33eeff39e0aa   25MB
+postgres:10-alpine                           e012ba9b5eff   78.1MB
